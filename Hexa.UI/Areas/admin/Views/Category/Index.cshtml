@@ -1,0 +1,62 @@
+﻿@model IOrderedQueryable<Category>
+<div class="right_col" role="main">
+    <div class="">
+
+
+        <div class="clearfix"></div>
+
+        <div class="row">
+            <div class="col-md-12 col-sm-12 ">
+                <div class="x_panel">
+                    <div class="x_title">
+                        <h2>Kategori Yönetim Sayfası</h2>
+                        <a asp-controller="Category" asp-action="New" class="btn btn-success float-right" style="color:#fff">Kategori Ekle</a>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="card-box table-responsive">
+                                    <table id="datatable" class="table table-striped table-bordered" style="width:100%">
+                                        <thead>
+                                            <tr>
+                                                <th>Kategori Adı</th>
+                                                <th>Sıra Numarası</th>
+                                            </tr>
+                                        </thead>
+
+
+                                        <tbody>
+                                            @foreach (Category a in Model)
+                                            {
+                                                <tr>
+                                                    <td><a asp-controller="Category" asp-action="Edit" asp-route-id="@a.ID"
+                                                    >@if (a.ParentID ==null)
+                                                            {
+                                                                @a.Name
+                                                            }
+                                                            else
+                                                            {
+                                                                @a.ParentCategory.Name <span>&lt;</span> @a.Name
+                                                            }
+
+                                                    </a></td>
+                                                    <td>@a.DisplayIndex</td>
+                                                    <td>
+                                                        <a asp-controller="Category" asp-action="Delete" asp-route-id="@a.ID" class="btn btn-danger" style="color:#fff">Sil</a>
+                                                    </td>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>

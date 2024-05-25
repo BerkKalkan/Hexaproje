@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34408.163
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hexa.DAL", "Hexa.DAL\Hexa.DAL.csproj", "{209217D0-EE2A-4D96-A362-E981B03957B3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hexa.BL", "Hexa.BL\Hexa.BL.csproj", "{CBC92F50-EDFC-4733-9AB6-5FF8EB308966}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hexa.UI", "Hexa.UI\Hexa.UI.csproj", "{84BC049D-505E-42AB-8BB3-F1E31375FF30}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{209217D0-EE2A-4D96-A362-E981B03957B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{209217D0-EE2A-4D96-A362-E981B03957B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{209217D0-EE2A-4D96-A362-E981B03957B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{209217D0-EE2A-4D96-A362-E981B03957B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBC92F50-EDFC-4733-9AB6-5FF8EB308966}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBC92F50-EDFC-4733-9AB6-5FF8EB308966}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBC92F50-EDFC-4733-9AB6-5FF8EB308966}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBC92F50-EDFC-4733-9AB6-5FF8EB308966}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84BC049D-505E-42AB-8BB3-F1E31375FF30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84BC049D-505E-42AB-8BB3-F1E31375FF30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84BC049D-505E-42AB-8BB3-F1E31375FF30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84BC049D-505E-42AB-8BB3-F1E31375FF30}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A33D529C-8548-4093-B529-57F6C1C464A7}
+	EndGlobalSection
+EndGlobal

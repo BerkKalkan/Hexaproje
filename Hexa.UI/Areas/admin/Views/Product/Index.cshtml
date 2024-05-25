@@ -1,0 +1,61 @@
+﻿@model IOrderedQueryable<Product>
+<div class="right_col" role="main">
+    <div class="">
+
+
+        <div class="clearfix"></div>
+
+        <div class="row">
+            <div class="col-md-12 col-sm-12 ">
+                <div class="x_panel">
+                    <div class="x_title">
+                        <h2>Ürün Yönetim</h2>
+                        <a asp-controller="Product" asp-action="New" class="btn btn-success float-right" style="color:#fff">Ürün ekle</a>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="card-box table-responsive">
+                                    <table id="datatable" class="table table-striped table-bordered" style="width:100%">
+                                        <thead>
+                                            <tr>
+                                                <th>Ürün adı</th>
+                                                <th>Fiyat</th>
+                                                <th>Stok</th>
+                                                <th>Sıra Numarası</th>
+                                                <th>        </th>
+                                                <th>        </th>
+                                            </tr>
+                                        </thead>
+
+
+                                        <tbody>
+                                            @foreach (Product s in Model)
+                                            {
+                                                <tr>
+                                                    <td><a asp-controller="Product" asp-action="Edit" asp-route-id="@s.ID">@s.Name</a></td>
+                                                    <td>@s.Price</td>
+                                                    <td>@s.Stock</td>
+                                                    <td>@s.DisplayIndex</td>
+                                                    <td>
+                                                        <a asp-controller="ProductPicture" asp-action="Index" asp-route-productid="@s.ID">Ürün resimleri</a>
+                                                    </td>
+                                                    <td>
+                                                        <a asp-controller="Product" asp-action="Delete" asp-route-id="@s.ID" class="btn btn-danger" style="color:#fff">Sil</a>
+                                                    </td>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>

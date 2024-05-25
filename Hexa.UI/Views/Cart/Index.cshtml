@@ -1,0 +1,65 @@
+﻿@model List<Cart>
+@{
+	Layout = "_DetailLayout";
+}
+<!-- Page info -->
+<div class="page-top-info">
+	<div class="container">
+		<h4>Sepetim</h4>
+	</div>
+</div>
+<!-- Page info end -->
+<!-- cart section end -->
+<section class="cart-section spad">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8">
+				<div class="cart-table">
+					<h3>Sepetim</h3>
+					<div class="cart-table-warp">
+						<table>
+							<thead>
+								<tr>
+									<th class="product-th">Ürün</th>
+									<th class="quy-th">Adet</th>
+									<th class="total-th">Fiyat</th>
+								</tr>
+							</thead>
+							<tbody>
+								@foreach (Cart c in Model)
+								{
+									<tr>
+										<td class="product-col">
+											<img src="@c.ProductPicture" alt="@c.ProductName">
+											<div class="pc-title">
+												<h4>@c.ProductName</h4>
+												<p>@c.ProductPrice</p>
+											</div>
+										</td>
+										<td class="quy-col">
+											<div class="quantity">
+												<div class="pro-qty">
+													<input type="text" value="@c.Quantity">
+												</div>
+											</div>
+										</td>
+										<td><i onclick="removeCart(@c.ProductID)" class="flaticon-remove removeIcon"></i></td>
+										<td class="total-col"><h4>@(c.ProductPrice * c.Quantity)</h4></td>
+									</tr>
+								}
+							</tbody>
+						</table>
+					</div>
+					<div class="total-cost">
+						<h6>Toplam Tutar <span>@Model.Sum(x => x.Quantity * x.ProductPrice)</span></h6>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 card-right">
+				<a asp-controller="Cart" asp-action="CheckOut" class="site-btn">Alışverişi Tamamla</a>
+				<a href="" class="site-btn sb-dark">Alışverişe Devam</a>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- cart section end -->
